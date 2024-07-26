@@ -12,10 +12,10 @@ const Hero = () => {
       <Container>
         <div className="flex flex-row items-center gap-8 rounded-full bg-white/5 px-4 py-8 backdrop-blur-sm max-xl:px-24 max-lg:flex-col max-lg:gap-16 max-lg:px-8">
           <div className="flex flex-col gap-16">
-            <h1 className="text-start text-6xl font-bold leading-tight max-lg:text-center max-sm:leading-tight max-[400px]:text-5xl">
+            <h1 className="text-start text-6xl font-bold leading-tight max-lg:text-center max-sm:text-5xl max-sm:leading-tight">
               Sistem Monitoring Produksi Terkini
             </h1>
-            <p className="max-w-[900px] text-start text-lg leading-relaxed text-neutral-600 max-lg:text-center max-sm:leading-relaxed max-[400px]:text-base">
+            <p className="max-w-[900px] text-start text-lg leading-relaxed text-neutral-600 max-lg:text-center max-sm:text-base max-sm:leading-relaxed">
               SIMPONI merupakan website yang dirancang khusus untuk bagian
               produksi Badan Pusat Statistik Provinsi Jambi yang digunakan untuk
               monitoring dan evaluasi produksi di Provinsi Jambi.
