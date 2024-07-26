@@ -6,10 +6,16 @@ import LogoLink from "./LogoLink";
 
 const Footer = () => {
   return (
-    <footer id="footer" className="border-t border-neutral-300 bg-white">
+    <footer id="footer" className="relative">
+      <Image
+        src="/footer-bg.jpeg"
+        alt="Gambar Hutan"
+        fill={true}
+        className="absolute -z-10 object-cover object-center opacity-10 blur-sm"
+      />
       <Container>
         <div className="grid w-full grid-cols-4 gap-4 px-4 py-8 max-xl:px-24 max-lg:grid-cols-2 max-lg:gap-16 max-lg:px-8 max-sm:grid-cols-1">
-          <LogoLink type="both" />
+          <LogoLink type="both" textColor="#000" />
           <div className="flex flex-shrink-0 flex-col gap-6">
             <p className="font-bold">Halaman</p>
             {links.map((link, i) => {

@@ -1,6 +1,5 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Personnel from "@/components/Personnel";
 import Footer from "@/components/Footer";
 
 const Home = () => {
@@ -8,7 +7,6 @@ const Home = () => {
     <main>
       <Navbar />
       <Hero />
-      <Personnel />
       <Footer />
     </main>
   );
