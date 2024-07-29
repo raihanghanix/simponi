@@ -12,7 +12,6 @@ const Footer = () => {
         alt="Gambar Hutan"
         fill={true}
         className="absolute -z-10 object-cover object-center opacity-10 blur-sm"
-        loading="eager"
       />
       <Container>
         <div className="grid w-full grid-cols-4 gap-4 px-4 py-8 max-xl:px-24 max-lg:grid-cols-2 max-lg:gap-16 max-lg:px-8 max-sm:grid-cols-1">
