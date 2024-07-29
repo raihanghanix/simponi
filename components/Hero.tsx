@@ -28,7 +28,7 @@ const Hero = () => {
                     <Link
                       key={link.name}
                       href={link.href}
-                      className="w-[168px] rounded-lg border border-neutral-300 bg-white px-5 py-3 text-center text-lg font-semibold text-neutral-600 transition-all duration-100 hover:bg-neutral-200 max-[678px]:w-full"
+                      className="w-[168px] rounded-lg border border-neutral-300 bg-white px-5 py-3 text-center text-lg font-semibold text-neutral-600 transition-colors duration-100 hover:bg-neutral-200 max-[678px]:w-full"
                     >
                       {link.name}
                     </Link>

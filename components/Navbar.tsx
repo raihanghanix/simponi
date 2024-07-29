@@ -19,7 +19,7 @@ const Navbar = () => {
         <Container>
           <div className="flex items-center justify-between gap-8 p-4">
             <button
-              className="transition-color rounded-lg border border-white px-6 py-2 text-lg font-bold text-white duration-100 hover:bg-white hover:text-bpsBlue sm:hidden"
+              className="transition-color rounded-lg border border-white px-6 py-2 text-lg font-bold text-white duration-100 focus-within:bg-transparent focus-within:text-white hover:bg-white hover:text-bpsBlue sm:hidden"
               onClick={handlePress}
               type="button"
             >
@@ -37,7 +37,7 @@ const Navbar = () => {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className="transition-color text-white duration-100 last:rounded-lg last:bg-white last:px-4 last:py-2 last:font-bold last:text-bpsBlue last:hover:bg-white/70"
+                    className="transition-color text-white duration-100 last:rounded-lg last:bg-white last:px-4 last:py-2 last:font-bold last:text-bpsBlue hover:text-white/70 last:hover:bg-white/70 last:hover:text-bpsBlue"
                   >
                     {link.name}
                   </Link>
