@@ -42,7 +42,7 @@ const Hero = () => {
               alt="Gambar Pohon"
               width={640}
               height={640}
-              fill={false}
+              loading="eager"
             />
           </div>
         </div>

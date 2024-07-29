@@ -10,14 +10,26 @@ const LogoLink = ({ type, textColor }: LogoLinkProps) => {
   return (
     <Link href="/" className="flex items-start justify-start gap-2">
       {type === "logoOnly" && (
-        <Image src="/bps-logo.png" alt="Logo BPS" width={64} height={64} />
+        <Image
+          src="/bps-logo.png"
+          alt="Logo BPS"
+          width={64}
+          height={64}
+          loading="eager"
+        />
       )}
 
       {type === "textOnly" && <p className="text-2xl font-bold">SIMPONI</p>}
 
       {type === "both" && (
         <>
-          <Image src="/bps-logo.png" alt="Logo BPS" width={64} height={64} />
+          <Image
+            src="/bps-logo.png"
+            alt="Logo BPS"
+            width={64}
+            height={64}
+            loading="eager"
+          />
           <p className="text-2xl font-bold" style={{ color: `${textColor}` }}>
             SIMPONI
           </p>
