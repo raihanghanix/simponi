@@ -22,15 +22,17 @@ const Hero = () => {
             </p>
             <div className="flex w-full justify-start gap-8 max-lg:justify-center max-[678px]:flex-col max-[678px]:gap-4">
               {links.map((link, i) => {
-                return (
-                  <Link
-                    key={link.name}
-                    href={link.href}
-                    className="w-[168px] rounded-lg border border-neutral-300 bg-white px-5 py-3 text-center text-lg font-semibold text-neutral-600 transition-all duration-100 hover:bg-neutral-200 max-[678px]:w-full"
-                  >
-                    {link.name}
-                  </Link>
-                );
+                if (i === links.length - 1) return null;
+                else
+                  return (
+                    <Link
+                      key={link.name}
+                      href={link.href}
+                      className="w-[168px] rounded-lg border border-neutral-300 bg-white px-5 py-3 text-center text-lg font-semibold text-neutral-600 transition-all duration-100 hover:bg-neutral-200 max-[678px]:w-full"
+                    >
+                      {link.name}
+                    </Link>
+                  );
               })}
             </div>
           </div>

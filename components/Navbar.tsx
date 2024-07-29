@@ -31,16 +31,18 @@ const Navbar = () => {
             <div className="max-sm:hidden">
               <LogoLink type="both" textColor="#fff" />
             </div>
-            <div className="flex gap-8 max-sm:hidden">
-              {links.map((link, i) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="transition-color text-white duration-100 hover:text-white/70"
-                >
-                  {link.name}
-                </Link>
-              ))}
+            <div className="flex items-center gap-8 max-sm:hidden">
+              {links.map((link, i) => {
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className="transition-color text-white duration-100 last:rounded-lg last:bg-white last:px-4 last:py-2 last:font-bold last:text-bpsBlue last:hover:bg-white/70"
+                  >
+                    {link.name}
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </Container>
@@ -56,7 +58,7 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 href={link.href}
-                className="transition-color w-full text-center text-white duration-100 hover:text-white/70"
+                className="transition-color w-full text-center text-white duration-100 last:rounded-lg last:bg-white last:px-4 last:py-2 last:font-bold last:text-bpsBlue hover:text-white/70 last:hover:bg-white/70"
               >
                 {link.name}
               </Link>
