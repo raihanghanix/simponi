@@ -20,7 +20,7 @@ const Footer = () => {
             <LogoLink type="both" textColor="#000" />
           </div>
           <div className="flex flex-shrink-0 flex-col gap-6">
-            <p className="font-bold">Halaman</p>
+            <p className="font-bold text-bpsBlue">Halaman</p>
             {links.map((link, i) => {
               return (
                 <Link
@@ -34,30 +34,44 @@ const Footer = () => {
             })}
           </div>
           <div className="flex flex-shrink-0 flex-col gap-6">
-            <p className="font-bold">Jam Kerja</p>
+            <p className="font-bold text-bpsBlue">Jam Kerja</p>
             <div>
-              <p className="mb-2 font-bold">Senin - Kamis</p>
+              <p className="mb-2 font-bold">
+                <i className="fa-solid fa-calendar-days mr-1"></i> Senin - Kamis
+              </p>
               <p className="text-neutral-600">07.30 - 16.00</p>
             </div>
             <div>
-              <p className="mb-2 font-bold">Jumat</p>
+              <p className="mb-2 font-bold">
+                <i className="fa-solid fa-calendar-days mr-1"></i> Jumat
+              </p>
               <p className="text-neutral-600">07.30 - 16.30</p>
             </div>
           </div>
           <div className="flex flex-shrink-0 flex-col gap-6">
-            <p className="font-bold">Kontak Kami</p>
+            <p className="font-bold text-bpsBlue">Kontak Kami</p>
             <div>
-              <p className="mb-2 font-bold">Alamat</p>
-              <p className="text-neutral-600">
-                Jalan Ahmad Yani No.4 Telanaipura Jambi.
+              <p className="mb-2 font-bold">
+                <i className="fa-solid fa-location-dot mr-1"></i> Alamat
               </p>
+              <Link
+                href="https://maps.app.goo.gl/cXnkoqMNyGx1sRZG7"
+                className="text-neutral-600 underline"
+                target="_blank"
+              >
+                Jalan Ahmad Yani No.4 Telanaipura Jambi.
+              </Link>
             </div>
             <div>
-              <p className="mb-2 font-bold">Email</p>
+              <p className="mb-2 font-bold">
+                <i className="fa-solid fa-envelope mr-1"></i> Email
+              </p>
               <p className="text-neutral-600">produksi1500@bps.go.id</p>
             </div>
             <div>
-              <p className="mb-2 font-bold">Telepon</p>
+              <p className="mb-2 font-bold">
+                <i className="fa-solid fa-phone mr-1"></i> Telepon
+              </p>
               <p className="text-neutral-600">0741-60497</p>
             </div>
           </div>
