@@ -4,10 +4,12 @@ import { links } from "@/utils/links";
 import Container from "./Container";
 import LogoLink from "./LogoLink";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [isPressed, setIsPressed] = useState<boolean>(false);
+  const currUrl = usePathname();
 
   const handlePress = (): void => {
     setIsPressed((prev) => !prev);
@@ -19,9 +21,12 @@ const Navbar = () => {
         <Container>
           <div className="flex items-center justify-between gap-8 p-4">
             <button
-              className="transition-color rounded-lg border border-white px-6 py-2 text-lg font-bold text-white duration-100 focus-within:bg-transparent focus-within:text-white hover:bg-white hover:text-bpsBlue sm:hidden"
+              className={`transition-color rounded-lg border border-white px-6 py-2 text-lg font-bold duration-100 hover:bg-white hover:text-bpsBlue sm:hidden ${
+                isPressed
+                  ? "bg-white text-bpsBlue"
+                  : "bg-transparent text-white"
+              }`}
               onClick={handlePress}
-              type="button"
             >
               <i className="fa-solid fa-bars"></i>
             </button>
@@ -37,7 +42,11 @@ const Navbar = () => {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className="transition-color text-white duration-100 last:rounded-lg last:bg-white last:px-4 last:py-2 last:font-bold last:text-bpsBlue hover:text-white/70 last:hover:bg-white/70 last:hover:text-bpsBlue"
+                    className={`transition-color duration-100 last:rounded-lg last:bg-white last:px-4 last:py-2 last:font-bold last:text-bpsBlue hover:text-white/70 last:hover:bg-white/70 last:hover:text-bpsBlue ${
+                      currUrl === link.href
+                        ? "text-white/70 last:bg-white/70"
+                        : "text-white"
+                    }`}
                   >
                     {link.name}
                   </Link>
@@ -58,7 +67,11 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 href={link.href}
-                className="transition-color w-full text-center text-white duration-100 last:rounded-lg last:bg-white last:px-4 last:py-2 last:font-bold last:text-bpsBlue hover:text-white/70 last:hover:bg-white/70"
+                className={`transition-color duration-100 last:rounded-lg last:bg-white last:px-4 last:py-2 last:font-bold last:text-bpsBlue hover:text-white/70 last:hover:bg-white/70 last:hover:text-bpsBlue ${
+                  currUrl === link.href
+                    ? "text-white/70 last:bg-white/70"
+                    : "text-white"
+                }`}
               >
                 {link.name}
               </Link>
