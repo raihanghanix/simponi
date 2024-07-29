@@ -3,12 +3,13 @@ import Link from "next/link";
 import Container from "./Container";
 import { links } from "@/utils/links";
 import LogoLink from "./LogoLink";
+import footerImg from "@/app/img/footer-bg.jpeg";
 
 const Footer = () => {
   return (
     <footer id="footer" className="relative">
       <Image
-        src="/footer-bg.jpeg"
+        src={footerImg}
         alt="Gambar Hutan"
         fill={true}
         className="absolute -z-10 object-cover object-center opacity-10 blur-sm"
