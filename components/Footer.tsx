@@ -15,7 +15,9 @@ const Footer = () => {
       />
       <Container>
         <div className="grid w-full grid-cols-4 gap-4 px-4 py-8 max-xl:px-24 max-lg:grid-cols-2 max-lg:gap-16 max-lg:px-8 max-sm:grid-cols-1">
-          <LogoLink type="both" textColor="#000" />
+          <div className="h-fit w-fit">
+            <LogoLink type="both" textColor="#000" />
+          </div>
           <div className="flex flex-shrink-0 flex-col gap-6">
             <p className="font-bold">Halaman</p>
             {links.map((link, i) => {

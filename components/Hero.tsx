@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="flex h-auto items-center justify-center bg-[url('/grid.svg')] bg-cover bg-center py-16"
+      className="flex h-auto items-center justify-center bg-white py-16"
     >
       <Container>
         <div className="flex flex-row items-center gap-8 rounded-full bg-white/5 px-4 py-8 backdrop-blur-sm max-xl:px-24 max-lg:flex-col max-lg:gap-16 max-lg:px-8">
