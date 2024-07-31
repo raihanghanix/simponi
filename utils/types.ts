@@ -1,5 +1,6 @@
 type TLink = {
   name: string;
   href: string;
-  access?: string;
+  iconTopClassName?: string;
+  iconBottomClassName?: string;
 };

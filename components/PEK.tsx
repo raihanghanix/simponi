@@ -1,21 +1,24 @@
 import Container from "./Container";
 import Link from "next/link";
-import { webEntryLinks } from "@/utils/links";
+import { pekLinks } from "@/utils/links";
+import Spreadsheet from "./Spreadsheet";
 
-const WebEntry = () => {
+const PEK = () => {
   return (
     <section
-      id="web-entry"
+      id="pek"
       className="flex h-auto items-start justify-start py-16 shadow-inner max-lg:py-8"
     >
       <Container>
         <div className="flex flex-col items-start justify-start gap-8 px-4 py-8 max-xl:px-24 max-lg:gap-16 max-lg:px-8">
           <div className="flex w-full flex-col gap-16">
             <h1 className="text-start text-6xl font-bold leading-tight max-lg:text-center max-sm:text-5xl max-sm:leading-tight">
-              Web Entry
+              PEK
             </h1>
-            <div className="grid w-full grid-cols-2 justify-start gap-4 max-lg:grid-cols-1 max-lg:justify-center max-[678px]:gap-4">
-              {webEntryLinks.map((link, i) => {
+            <div
+              className={`grid w-full grid-cols-3 justify-start gap-4 max-lg:grid-cols-1 max-lg:justify-center`}
+            >
+              {pekLinks.map((link, i) => {
                 return (
                   <Link
                     key={link.name}
@@ -54,6 +57,12 @@ const WebEntry = () => {
                 );
               })}
             </div>
+            <h2 className="text-start text-3xl font-bold leading-tight max-lg:text-center max-sm:text-2xl max-sm:leading-tight">
+              Preview Monev PEK
+            </h2>
+            <h2 className="text-start text-3xl font-bold leading-tight max-lg:text-center max-sm:text-2xl max-sm:leading-tight">
+              Preview Jadwal PEK
+            </h2>
           </div>
         </div>
       </Container>
@@ -61,4 +70,4 @@ const WebEntry = () => {
   );
 };
 
-export default WebEntry;
+export default PEK;

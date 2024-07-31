@@ -1,7 +1,9 @@
+import Pertanian from "@/components/Pertanian";
+
 const page = () => {
   return (
     <main>
-      <section id="pertanian" className=""></section>
+      <Pertanian />
     </main>
   );
 };

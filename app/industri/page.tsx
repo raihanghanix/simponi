@@ -1,7 +1,9 @@
+import Industri from "@/components/Industri";
+
 const page = () => {
   return (
     <main>
-      <section id="industri" className=""></section>
+      <Industri />
     </main>
   );
 };

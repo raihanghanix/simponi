@@ -1,7 +1,9 @@
+import PEK from "@/components/PEK";
+
 const page = () => {
   return (
     <main>
-      <section id="pek" className=""></section>
+      <PEK />
     </main>
   );
 };
