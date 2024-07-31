@@ -8,11 +8,15 @@ import Link from "next/link";
 import { links } from "@/utils/links";
 
 const Navbar = () => {
-  const [isPressed, setIsPressed] = useState<boolean>(false);
+  const [isOpened, setIsOpened] = useState<boolean>(false);
   const currUrl = usePathname();
 
-  const handlePress = (): void => {
-    setIsPressed((prev) => !prev);
+  const handleMenuClick = (): void => {
+    setIsOpened((prev) => !prev);
+  };
+
+  const handleCloseMenu = (): void => {
+    setIsOpened(false);
   };
 
   return (
@@ -22,15 +26,13 @@ const Navbar = () => {
           <div className="flex items-center justify-between gap-8 p-4">
             <button
               className={`transition-color rounded-lg border border-white px-6 py-2 text-lg font-bold duration-100 sm:hidden ${
-                isPressed
-                  ? "bg-white text-bpsBlue"
-                  : "bg-transparent text-white"
+                isOpened ? "bg-white text-bpsBlue" : "bg-transparent text-white"
               }`}
-              onClick={handlePress}
+              onClick={handleMenuClick}
             >
               <i className="fa-solid fa-bars"></i>
             </button>
-            <div className="sm:hidden">
+            <div className="sm:hidden" onClick={handleCloseMenu}>
               <LogoLink type="logoOnly" textColor="#fff" />
             </div>
             <div className="max-sm:hidden">
@@ -55,8 +57,8 @@ const Navbar = () => {
         </Container>
       </div>
       <div
-        className={`transition-transform duration-100 absolute h-screen w-full  bg-bpsBlue sm:hidden ${
-          isPressed ? "translate-x-0" : "-translate-x-full"
+        className={`transition-transform duration-100 absolute h-screen w-full bg-bpsBlue sm:hidden ${
+          isOpened ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <Container>
@@ -70,6 +72,7 @@ const Navbar = () => {
                     ? "text-white/70 last:bg-white/70"
                     : "text-white"
                 }`}
+                onClick={handleCloseMenu}
               >
                 {link.name}
               </Link>
