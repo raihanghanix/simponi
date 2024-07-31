@@ -1,11 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-body {
-  scroll-behavior: smooth;
-}
-
-.full {
-  @apply h-full w-full;
-}

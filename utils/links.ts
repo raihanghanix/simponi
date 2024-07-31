@@ -1,22 +1,39 @@
-export const links: TLinks[] = [
+const links: TLink[] = [
   {
     name: "Pertanian",
     href: "/pertanian",
-    access: "everyone",
   },
   {
     name: "Industri",
     href: "/industri",
-    access: "everyone",
   },
   {
     name: "PEK",
     href: "/pek",
-    access: "everyone",
   },
   {
     name: "Web Entry",
     href: "/web-entry",
-    access: "everyone",
   },
 ];
+
+const webEntryLinks: TLink[] = [
+  {
+    name: "Perikanan",
+    href: "https://ipd.bps.go.id/perikanan",
+  },
+  {
+    name: "Perkebunan Bulanan",
+    href: "https://skb.bps.go.id/pb",
+  },
+  {
+    name: "Perkebunan Tahunan",
+    href: "http://pengolahan.bps.go.id/",
+  },
+  {
+    name: "Kehutanan",
+    href: "https://webentry.bps.go.id/kehutanan",
+  },
+];
+
+export { links, webEntryLinks };

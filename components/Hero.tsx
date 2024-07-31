@@ -1,7 +1,7 @@
-import { links } from "@/utils/links";
 import Container from "./Container";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import { links } from "@/utils/links";
 import pohon from "@/app/img/pohon.png";
 
 const Hero = () => {
@@ -23,17 +23,16 @@ const Hero = () => {
             </p>
             <div className="flex w-full justify-start gap-8 max-lg:justify-center max-[678px]:flex-col max-[678px]:gap-4">
               {links.map((link, i) => {
-                if (i === links.length - 1) return null;
-                else
-                  return (
-                    <Link
-                      key={link.name}
-                      href={link.href}
-                      className="w-[168px] rounded-lg border border-neutral-300 bg-white px-5 py-3 text-center text-lg font-semibold text-neutral-600 transition-colors duration-100 hover:bg-neutral-200 max-[678px]:w-full"
-                    >
-                      {link.name}
-                    </Link>
-                  );
+                if (link.name === "Web Entry") return null;
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className="w-[168px] rounded-lg border border-neutral-300 bg-white px-5 py-3 text-center text-lg font-semibold text-neutral-600 transition-colors duration-100 hover:bg-neutral-200 max-[678px]:w-full"
+                  >
+                    {link.name}
+                  </Link>
+                );
               })}
             </div>
           </div>

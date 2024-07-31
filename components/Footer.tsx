@@ -1,9 +1,9 @@
+import Container from "./Container";
 import Image from "next/image";
 import Link from "next/link";
-import Container from "./Container";
-import { links } from "@/utils/links";
 import LogoLink from "./LogoLink";
 import footerImg from "@/app/img/footer-bg.jpeg";
+import { links } from "@/utils/links";
 
 const Footer = () => {
   return (
@@ -21,17 +21,15 @@ const Footer = () => {
           </div>
           <div className="flex flex-shrink-0 flex-col gap-6">
             <p className="font-bold text-bpsBlue">Halaman</p>
-            {links.map((link, i) => {
-              return (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="w-fit text-neutral-600 underline hover:text-black"
-                >
-                  {link.name}
-                </Link>
-              );
-            })}
+            {links.map((link, i) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="w-fit text-neutral-600 underline hover:text-black"
+              >
+                {link.name}
+              </Link>
+            ))}
           </div>
           <div className="flex flex-shrink-0 flex-col gap-6">
             <p className="font-bold text-bpsBlue">Jam Kerja</p>

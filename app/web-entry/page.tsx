@@ -3,10 +3,11 @@ import Navbar from "@/components/Navbar";
 
 const page = () => {
   return (
-    <div>
+    <main>
       <Navbar />
+      <section id="web-entry" className=""></section>
       <Footer />
-    </div>
+    </main>
   );
 };
 
