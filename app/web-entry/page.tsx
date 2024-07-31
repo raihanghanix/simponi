@@ -1,11 +1,12 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import WebEntry from "@/components/WebEntry";
 
 const page = () => {
   return (
     <main>
       <Navbar />
-      <section id="web-entry" className=""></section>
+      <WebEntry />
       <Footer />
     </main>
   );
