@@ -1,6 +1,7 @@
 import Container from "./Container";
 import Link from "next/link";
 import { industriLinks } from "@/utils/links";
+import Spreadsheet from "./Spreadsheet";
 
 const Industri = () => {
   return (
@@ -22,6 +23,7 @@ const Industri = () => {
                   <Link
                     key={link.name}
                     href={link.href}
+                    target="_blank"
                     className="flex gap-8 rounded-lg border border-neutral-300 bg-white p-12 text-lg transition-colors duration-100 hover:bg-neutral-200"
                   >
                     <div className="flex flex-1 flex-col gap-2 truncate">
@@ -56,12 +58,12 @@ const Industri = () => {
                 );
               })}
             </div>
-            <h2 className="text-start text-3xl font-bold leading-tight max-lg:text-center max-sm:text-2xl max-sm:leading-tight">
-              Preview Monev Industri
-            </h2>
-            <h2 className="text-start text-3xl font-bold leading-tight max-lg:text-center max-sm:text-2xl max-sm:leading-tight">
-              Preview Jadwal Industri
-            </h2>
+            <Spreadsheet
+              spreadsheetId={
+                industriLinks.filter((item) => item.name === "Monev").at(0)
+                  ?.spreadsheetId ?? ""
+              }
+            />
           </div>
         </div>
       </Container>

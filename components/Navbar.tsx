@@ -11,11 +11,11 @@ const Navbar = () => {
   const [isOpened, setIsOpened] = useState<boolean>(false);
   const currUrl = usePathname();
 
-  const handleMenuClick = (): void => {
+  const handleMenuClick = () => {
     setIsOpened((prev) => !prev);
   };
 
-  const handleCloseMenu = (): void => {
+  const handleCloseMenu = () => {
     setIsOpened(false);
   };
 
