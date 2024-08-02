@@ -58,6 +58,9 @@ const Industri = () => {
                 );
               })}
             </div>
+            <h2 className="text-start text-3xl font-bold leading-tight max-lg:text-center max-sm:text-2xl max-sm:leading-tight">
+              Monitoring Industri
+            </h2>
             <Spreadsheet
               spreadsheetId={
                 industriLinks.filter((item) => item.name === "Monev").at(0)

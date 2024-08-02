@@ -59,7 +59,7 @@ const PEK = () => {
               })}
             </div>
             <h2 className="text-start text-3xl font-bold leading-tight max-lg:text-center max-sm:text-2xl max-sm:leading-tight">
-              Preview Monev PEK
+              Monitoring PEK
             </h2>
             <Spreadsheet
               spreadsheetId={
