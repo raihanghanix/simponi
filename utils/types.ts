@@ -4,4 +4,5 @@ type TLink = {
   spreadsheetId?: string;
   iconTopClassName?: string;
   iconBottomClassName?: string;
+  bgColor?: string;
 };

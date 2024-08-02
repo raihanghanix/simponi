@@ -70,6 +70,7 @@ const pekLinks: TLink[] = [
     spreadsheetId: "1cVCPSklTRZKE8lvBKAGZZtjH3_5XoibWYJeie8lEuYY",
     iconTopClassName: "fa-solid fa-desktop",
     iconBottomClassName: "fa-solid fa-arrow-up-right-from-square",
+    bgColor: "#2D95C9",
   },
   {
     name: "Jadwal",
@@ -77,12 +78,14 @@ const pekLinks: TLink[] = [
     spreadsheetId: "153mkPUrAgaqVXi9Je8LqPgnWx4c9ywiz_lsDsU7b2TQ",
     iconTopClassName: "fa-solid fa-calendar-days",
     iconBottomClassName: "fa-solid fa-arrow-up-right-from-square",
+    bgColor: "#75B547",
   },
   {
     name: "Upload Laporan",
     href: "http://sussy-baka.com",
     iconTopClassName: "fa-solid fa-upload",
     iconBottomClassName: "fa-solid fa-arrow-up-right-from-square",
+    bgColor: "#E18939",
   },
 ];
 

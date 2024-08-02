@@ -24,11 +24,14 @@ const PEK = () => {
                     key={link.name}
                     href={link.href}
                     target="_blank"
-                    className="flex gap-8 rounded-lg border border-neutral-300 bg-white p-12 text-lg transition-colors duration-100 hover:bg-neutral-200"
+                    className="flex gap-8 rounded-lg border-b-4 border-neutral-200 p-12 text-lg transition-transform duration-100 hover:scale-95"
+                    style={{ background: link.bgColor }}
                   >
                     <div className="flex flex-1 flex-col gap-2 truncate">
-                      <p className="truncate font-semibold">{link.name}</p>
-                      <p className="truncate font-normal text-neutral-600">
+                      <p className="truncate font-semibold text-white">
+                        {link.name}
+                      </p>
+                      <p className="truncate font-normal text-neutral-100">
                         {link.href}
                       </p>
                     </div>
@@ -44,14 +47,14 @@ const PEK = () => {
                           link.iconTopClassName
                             ? link.iconTopClassName
                             : "hidden"
-                        } text-bpsBlue`}
+                        } text-white`}
                       ></i>
                       <i
                         className={`${
                           link.iconBottomClassName
                             ? link.iconBottomClassName
                             : "hidden"
-                        } text-bpsBlue`}
+                        } text-white`}
                       ></i>
                     </div>
                   </Link>
