@@ -1,8 +1,8 @@
 type TLink = {
+  belongsTo: string;
   name: string;
   href: string;
   spreadsheetId?: string;
-  iconTopClassName?: string;
-  iconBottomClassName?: string;
+  iconClassName?: string;
   bgColor?: string;
 };

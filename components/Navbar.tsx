@@ -1,15 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { usePathname } from "next/navigation";
 import Container from "./Container";
 import LogoLink from "./LogoLink";
-import Link from "next/link";
 import { links } from "@/utils/links";
+import NavLink from "./NavLink";
+import HamburgerButton from "./HamburgerButton";
 
 const Navbar = () => {
   const [isOpened, setIsOpened] = useState<boolean>(false);
-  const currUrl = usePathname();
 
   const handleMenuClick = () => {
     setIsOpened((prev) => !prev);
@@ -24,14 +23,7 @@ const Navbar = () => {
       <div className="bg-bpsBlue">
         <Container>
           <div className="flex items-center justify-between gap-8 p-4">
-            <button
-              className={`transition-color rounded-lg border border-white px-6 py-2 text-lg font-bold duration-100 sm:hidden ${
-                isOpened ? "bg-white text-bpsBlue" : "bg-transparent text-white"
-              }`}
-              onClick={handleMenuClick}
-            >
-              <i className="fa-solid fa-bars"></i>
-            </button>
+            <HamburgerButton isOpened={isOpened} onClick={handleMenuClick} />
             <div className="sm:hidden" onClick={handleCloseMenu}>
               <LogoLink type="logoOnly" textColor="#fff" />
             </div>
@@ -39,18 +31,12 @@ const Navbar = () => {
               <LogoLink type="both" textColor="#fff" />
             </div>
             <div className="flex items-center gap-8 max-sm:hidden">
-              {links.map((link, i) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className={`transition-color duration-100 last:rounded-lg last:bg-white last:px-4 last:py-2 last:font-bold last:text-bpsBlue hover:text-white/70 last:hover:bg-white/70 last:hover:text-bpsBlue ${
-                    currUrl === link.href
-                      ? "text-white/70 last:bg-white/70"
-                      : "text-white"
-                  }`}
-                >
-                  {link.name}
-                </Link>
+              {links.map((linkObj) => (
+                <NavLink
+                  key={linkObj.name}
+                  linkObj={linkObj}
+                  onClick={() => {}}
+                />
               ))}
             </div>
           </div>
@@ -63,19 +49,12 @@ const Navbar = () => {
       >
         <Container>
           <div className="flex flex-col items-center gap-8 p-4">
-            {links.map((link, i) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className={`transition-color duration-100 last:rounded-lg last:bg-white last:px-4 last:py-2 last:font-bold last:text-bpsBlue hover:text-white/70 last:hover:bg-white/70 last:hover:text-bpsBlue ${
-                  currUrl === link.href
-                    ? "text-white/70 last:bg-white/70"
-                    : "text-white"
-                }`}
+            {links.map((linkObj) => (
+              <NavLink
+                key={linkObj.name}
+                linkObj={linkObj}
                 onClick={handleCloseMenu}
-              >
-                {link.name}
-              </Link>
+              />
             ))}
           </div>
         </Container>
